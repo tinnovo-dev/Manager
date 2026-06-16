@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<project version="5.5" encoding="UTF-8">
+	<project_entity ID="debugger">
+		<connectionInfo use_defaults="false" tempFilesLocation="/home/quim/projects" debug_mode="local" serverHost="http://Server_Address/" port="10000"/>
+		<breakpoints>
+			<breakpoint fileName="/home/quim/projects/Manager/sys/module/catalogue/catalogue.php" lineNumber="128" enable="true" condition=""/>
+			<breakpoint fileName="/home/quim/projects/Manager/sys/module/catalogue/management/manage_catalogue.php" lineNumber="30" enable="true" condition=""/>
+			<breakpoint fileName="/home/quim/projects/Manager/sys/module/login/login.php" lineNumber="24" enable="true" condition=""/>
+			<breakpoint fileName="/usr/local/apache/htdocs/manager/main.php" lineNumber="14" enable="true" condition=""/>
+			<breakpoint fileName="/usr/local/apache/htdocs/proves/xsl.php" lineNumber="551" enable="true" condition=""/>
+		</breakpoints>
+		<watches/>
+	</project_entity>
+	<project_entity ID="SourceControl">
+		<encodingStyle value="CVS"/>
+	</project_entity>
+	<project_entity ID="project_roots">
+		<vfile name="/home/quim/projects/Manager"/>
+	</project_entity>
+	<project_entity ID="javaBridge" JRE_Name="1.5.0_06"/>
+	<project_entity ID="bookmarks"/>
+	<project_entity ID="editor_component" selectedEditor="21">
+		<openEditors>
+			<editor fileName="/home/quim/projects/Manager/etc/manager_conf.php" caretPosition="959" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/sys/kernel/core.php" caretPosition="1337" clone="false" encoding="UTF-8"/>
+			<editor fileName="/usr/local/apache/htdocs/manager/main.php" caretPosition="404" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/sys/kernel/support/support_core.php" caretPosition="1054" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/lib/XML/commons.php" caretPosition="1464" clone="false" encoding="UTF-8"/>
+			<editor fileName="/usr/local/apache/htdocs/proves/xsl.php" caretPosition="12425" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/sys/module/google/google.php" caretPosition="105" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/sys/module/contact/contact.php" caretPosition="703" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/etc/site_conf/2/self_conf.php" caretPosition="614" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/sys/module/login/login.php" caretPosition="1695" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/sys/module/lang/lang.php" caretPosition="386" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/etc/site_conf/2/lang/ca.php" caretPosition="3315" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/etc/site_conf/2/lang/es.php" caretPosition="638" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/sys/module/management/management.php" caretPosition="1275" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/etc/site_conf/1/self_conf.php" caretPosition="276" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/lib/XML/array2xml.class.php" caretPosition="1171" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/lib/SGBD/mySGBD.class.php" caretPosition="10653" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/etc/site_conf/1/manage/template.xsl" caretPosition="5038" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/etc/site_conf/0/lang/ca.php" caretPosition="244" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/sys/module/news/news.php" caretPosition="1693" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/sys/module/catalogue/catalogue.php" caretPosition="15038" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/sys/module/catalogue/management/manage_catalogue.php" caretPosition="13334" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/sys/module/news/manage_news.php" caretPosition="87" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/sys/module/catalogue/management/admin.xml" caretPosition="2976" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/lib/SUPPORT/support.php" caretPosition="3561" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/sys/module/ajax/ajax.php" caretPosition="290" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/etc/site_conf/1/lang/ca.php" caretPosition="3853" clone="false" encoding="UTF-8"/>
+			<editor fileName="/home/quim/projects/Manager/sys/module/catalogue/management/template.xsl" caretPosition="7150" clone="false" encoding="UTF-8"/>
+		</openEditors>
+	</project_entity>
+	<project_entity ID="Subversion">
+		<svnCmdArguments>
+			<SubversionCommand commandType="update"/>
+			<SubversionCommand commandType="commit"/>
+			<SubversionCommand commandType="add"/>
+			<SubversionCommand commandType="status"/>
+			<SubversionCommand commandType="diff"/>
+			<SubversionCommand commandType="delete"/>
+			<SubversionCommand commandType="revert"/>
+			<SubversionCommand commandType="resolve"/>
+		</svnCmdArguments>
+	</project_entity>
+	<project_entity ID="CVS">
+		<lastArguments>
+			<CVSCommand commandType="update"/>
+			<CVSCommand commandType="commit"/>
+			<CVSCommand commandType="add"/>
+			<CVSCommand commandType="status"/>
+			<CVSCommand commandType="diff"/>
+		</lastArguments>
+	</project_entity>
+</project>

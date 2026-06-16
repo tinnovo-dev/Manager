@@ -1,0 +1,54 @@
+<!-- MODULE CATALOGUE -->
+<admin>	
+	<table name="catalogue">
+		<field name="id" is_pk="true" type="0" order="1" />
+		<field name="name" type="1" order="2" />
+		<field name="separator" type="-1" order="" />
+		<field name="description" type="2" order="3" />
+		<field name="date_create" type="3" order="4" />
+		<field name="date_modificated" type="3" order="5" />		
+		<field name="user_create" type="8" order="6" />
+		<field name="user_modificated" type="8" order="7" />
+	</table>
+	<table name="catalogue_category">
+		<field name="id" is_pk="true" type="0" order="1" />
+		<field name="catalogue" type="7" foreign="catalogue" foreign_fields="id,name" order="2" />
+		<field name="catalogue_category" type="7" foreign="catalogue_category" is_category="true" foreign_fields="id,catalogue_category,name" where="catalogue:catalogue_id" order="2" />		
+		<field name="name" type="1" order="3" />
+		<field name="description" type="2" order="4" />
+		<field name="date_create" type="3" order="5" />
+		<field name="date_modificated" type="3" order="6" />	
+		<field name="user_create" type="8" order="7" />
+		<field name="user_modificated" type="8" order="8" />
+	</table>	
+	<table name="catalogue_item_model">
+		<field name="id" is_pk="true" type="0" order="1" />		
+		<field name="catalogue_item_model_category" is_category="true" type="7" foreign="catalogue_item_model_category" foreign_fields="id,name" where="catalogue:catalogue_id" order="2" />
+		<field name="name" type="1" order="3" />
+		<field name="description" type="2" order="4" />
+		<field name="date_create" type="3" order="5" />
+		<field name="date_modificated" type="3" order="6" />	
+		<field name="user_create" type="8" order="7" />
+		<field name="user_modificated" type="8" order="8" />
+	</table>
+	<table name="catalogue_item_model_category">
+		<field name="id" is_pk="true" type="0" order="1" />
+		<field name="catalogue" type="7" foreign="catalogue" foreign_fields="id,name" order="2" />
+		<field name="catalogue_category" type="7" foreign="catalogue_category" is_category="true" foreign_fields="id,catalogue_category,name" where="catalogue:catalogue_id" order="2" />		
+		<field name="catalogue_item_model_category" is_category="true" type="7" foreign="catalogue_item_model_category" foreign_fields="id,name" where="catalogue:catalogue_id" order="2" />
+		<field name="name" type="1" order="3" />
+		<field name="description" type="2" order="4" />
+		<field name="date_create" type="3" order="5" />
+		<field name="date_modificated" type="3" order="6" />	
+		<field name="user_create" type="8" order="7" />
+		<field name="user_modificated" type="8" order="8" />
+	</table>
+	<table name="catalogue_item">
+		<field name="id" is_pk="true" type="0" order="1" />
+<!--	<field name="catalogue_item_model" type="7" foreign="catalogue_item_model" foreign_fields="id,catalogue_item_model_category,name" order="2" /> -->
+		<field name="catalogue_item_model" type="5" order="2" />
+		<field name="name" type="14" source="catalogue_item_model" order="3" /> 
+<!--		<field name="name" type="1" order="3" /> -->
+		<!--<field name="description" type="2" order="4" />		-->
+	</table>
+</admin>

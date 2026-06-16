@@ -1,0 +1,155 @@
+<admin>
+	<pagination size="5" />
+<!-- MODULE NEWS -->
+	<actions module="news">
+		<action name="admin_news_block" table="news_block" />
+		<action name="admin_news" table="news" />
+		<action name="admin_news_category" table="news_category" />
+		<action name="admin_news_view" table="news_view" />
+		<action name="admin_news_template" table="news_template" />
+	</actions>	
+	<table name="news_block">
+		<field name="id" is_pk="true" type="0" order="1" />
+		<field name="name" type="1" order="2" />
+		<field name="separator" type="-1" order="" />
+		<field name="description" type="2" order="3" />
+		<field name="date_create" type="3" order="4" />
+		<field name="date_modificated" type="3" order="5" />		
+		<field name="user_create" type="8" order="6" />
+		<field name="user_modificated" type="8" order="7" />
+	</table>	
+	<table name="news">
+		<field name="id" is_pk="true" type="0" order="1" />
+		<field name="news_block" type="7" foreign="news_block" foreign_fields="id,name" order="2" />
+		<field name="holder" type="1" order="3" />
+		<field name="description" type="2" order="4" />
+		<field name="body" type="2" order="5" />
+		<field name="date_create" type="3" order="6" />
+		<field name="date_modificated" type="3" order="7" />		
+		<field name="user_create" type="8" order="8" />
+		<field name="user_modificated" type="8" order="9" />
+		<field name="lang" is_pk="true" type="varchar" order="10" />
+	</table>
+	<table name="news_category">
+		<field name="id" is_pk="true" type="0" order="1" />
+		<field name="news_category" type="7" foreign="news_category" is_category="true" foreign_fields="id,news_category,name" order="2" />
+		<field name="name" type="1" order="3" />
+		<field name="description" type="2" order="4" />
+		<field name="date_create" type="3" order="5" />
+		<field name="date_modificated" type="3" order="6" />	
+		<field name="user_create" type="8" order="7" />
+		<field name="user_modificated" type="8" order="8" />
+		<field name="lang" is_pk="true" type="varchar" order="9" />
+	</table>
+	<table name="news_view">
+		<field name="id" is_pk="true" type="0" order="1" />
+		<field name="news" type="7" foreign="news" foreign_fields="id,holder" order="2" />
+		<field name="news_template" type="7" foreign="news_template" foreign_fields="id,name" order="2" />
+		<field name="name" type="1" order="3" />		
+	</table>
+	<table name="news_template">
+<!--		<field name="id" is_pk="true" type="5" order="x" /> -->
+		<field name="id" is_pk="true" type="0" order="1" />
+		<field name="separator" type="-1" order="" />
+		<field name="name" type="1" order="2" />
+		<field name="separator" type="-1" order="" />
+		<field name="description" type="2" order="3" />
+		<field name="separator" type="-1" order="" />
+		<field name="is_active" type="6" order="4" />
+		<field name="separator" type="-1" order="" />
+		<field name="source" type="2" order="5" />
+		<field name="date_create" type="3" order="6" />
+		<field name="date_modificated" type="3" order="7" />		
+		<field name="user_create" type="8" />
+		<field name="user_modificated" type="8" />
+	</table>
+<!-- MODULE CATALOGUE -->
+	<actions module="catalogue">
+		<action module="catalogue" name="admin_catalogue" table="catalogue" />
+		<action module="catalogue" name="admin_catalogue_category" table="catalogue_category" />		
+		<action module="catalogue" name="admin_catalogue_model" table="catalogue_model" />
+		<action module="catalogue" name="admin_catalogue_model_category" table="catalogue_model_category" />
+		<action module="catalogue" name="admin_catalogue_item" table="catalogue_item" />
+	</actions>	
+	<table name="catalogue">
+		<field name="id" is_pk="true" type="0" order="1" />
+		<field name="name" type="1" order="2" />
+		<field name="separator" type="-1" order="" />
+		<field name="description" type="2" order="3" />
+		<field name="date_create" type="3" order="4" />
+		<field name="date_modificated" type="3" order="5" />		
+		<field name="user_create" type="8" order="6" />
+		<field name="user_modificated" type="8" order="7" />
+	</table>
+<!--	<list table="catalogue" fields="id,name,description" /> -->
+	<table name="catalogue_category">
+		<field name="id" is_pk="true" type="0" order="1" />
+		<field name="catalogue" type="7" foreign="catalogue" foreign_fields="id,name" order="2" />
+		<field name="catalogue_category" type="7" foreign="catalogue_category" is_category="true" foreign_fields="id,catalogue_category,name" where="catalogue:catalogue_id" order="2" />		
+		<field name="name" type="1" order="3" />
+		<field name="description" type="2" order="4" />
+		<field name="date_create" type="3" order="5" />
+		<field name="date_modificated" type="3" order="6" />	
+		<field name="user_create" type="8" order="7" />
+		<field name="user_modificated" type="8" order="8" />
+	</table>	
+	<list table="catalogue_category" fields="id,name" />
+	<table name="catalogue_item_model">
+		<field name="id" is_pk="true" type="0" order="1" />
+		<field name="catalogue_category" is_category="true" type="7" foreign="catalogue_category" foreign_fields="id,name" where="catalogue:catalogue_id" order="2" />
+		<field name="catalogue_item_model_category" is_category="true" type="7" foreign="catalogue_item_model_category" foreign_fields="id,name" where="catalogue:catalogue_id" order="2" />
+		<field name="name" type="1" order="3" />
+		<field name="description" type="2" order="4" />
+		<field name="date_create" type="3" order="5" />
+		<field name="date_modificated" type="3" order="6" />	
+		<field name="user_create" type="8" order="7" />
+		<field name="user_modificated" type="8" order="8" />
+	</table>
+	<list table="catalogue_model" fields="id,catalogue_model_category,name,description" />
+	<table name="catalogue_item_model_category">
+		<field name="id" is_pk="true" type="0" order="1" />
+		<field name="catalogue" type="7" foreign="catalogue" foreign_fields="id,name" order="2" />
+		<field name="catalogue_item_model_category" is_category="true" type="7" foreign="catalogue_item_model_category" foreign_fields="id,name" where="catalogue:catalogue_id" order="2" />
+		<field name="name" type="1" order="3" />
+		<field name="description" type="2" order="4" />
+		<field name="date_create" type="3" order="5" />
+		<field name="date_modificated" type="3" order="6" />	
+		<field name="user_create" type="8" order="7" />
+		<field name="user_modificated" type="8" order="8" />
+	</table>
+	<list table="catalogue_item_model_category" is_category="true" fields="id,name,description" />
+	<table name="catalogue_item">
+		<field name="id" is_pk="true" type="0" order="1" />
+		<field name="catalogue_item_model" type="7" foreign="catalogue_item_model" foreign_fields="id,catalogue_item_model_category,name" order="2" />
+		<field name="name" type="1" order="3" />
+		<field name="description" type="2" order="4" />		
+		<dinamic_fields module="catalogue" table="catalogue_item" />
+	</table>
+	<list table="catalogue_item" fields="id,catalogue_model" />
+<!-- MODULE CONTACT -->
+	<actions module="contact">
+		<action name="admin_contact_form" table="contact_form" />
+		<action name="admin_contact" table="contact" />
+		<action name="admin_contact_category" table="contact_category" />
+		<action name="admin_contact_view" table="contact_view" />
+		<action name="admin_contact_template" table="contact_template" />
+		<action name="admin_contact_message" table="contact_message" />
+	</actions>
+	<table name="contact_form">
+		<field name="id" is_pk="true" type="0" order="1" />		
+		<field name="separator" type="-1" order="" />
+		<field name="name" type="1" order="3" />
+		<field name="separator" type="-1" order="" />
+		<field name="description" type="2" order="4" />
+		<field name="separator" type="-1" order="" />
+		<field name="is_active" type="6" order="4" />
+		<field name="separator" type="-1" order="" />
+		<field name="source" type="2" order="5" />		
+		<field name="date_create" type="3" order="6" />
+		<field name="date_modificated" type="3" order="7" />		
+		<field name="user_create" type="8" order="8" />
+		<field name="user_modificated" type="8" order="9" />
+		<field name="lang" is_pk="true" type="varchar" order="10" />
+	</table>
+	<list table="contact_form" fields="id,name" />
+</admin>
